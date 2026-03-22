@@ -18,6 +18,7 @@
             background-color: var(--cream);
             color: var(--black);
             font-family: 'Inter', sans-serif;
+            margin: 0;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
@@ -25,14 +26,12 @@
         .display-font { font-family: 'Cinzel', serif; }
         .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
 
-        /* Premium Gold Gradient */
         .gold-text {
             background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Sophisticated Animations */
         .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -45,14 +44,10 @@
         }
 
         .nav-link {
-            position: relative;
             letter-spacing: 0.2em;
             font-size: 10px;
             text-transform: uppercase;
-            transition: opacity 0.3s ease;
         }
-
-        .nav-link:hover { opacity: 0.7; }
 
         .hero-container {
             position: relative;
@@ -66,25 +61,28 @@
         }
 
         .btn-outline {
-            border: 1px solid rgba(255,255,255,0.3);
-            transition: all 0.5s ease;
+            border: 1px solid rgba(255,255,255,0.4);
+            padding: 1rem 3rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            font-size: 10px;
+            transition: all 0.4s ease;
+            text-decoration: none;
         }
 
         .btn-outline:hover {
             background: white;
             color: black;
-            border-color: white;
         }
     </style>
 </head>
 <body>
 
     <nav class="fixed w-full z-50 px-6 md:px-12 py-8 flex justify-between items-center mix-blend-difference text-white">
-        <div class="flex gap-8 items-center">
-            <div class="hidden md:flex gap-8">
-                <a href="#collections" class="nav-link">Collections</a>
-                <a href="#about" class="nav-link">The Craft</a>
-            </div>
+        <div class="hidden md:flex gap-8">
+            <a href="#" class="nav-link">Collections</a>
+            <a href="#" class="nav-link">The Craft</a>
         </div>
         
         <div class="md:absolute md:left-1/2 md:-translate-x-1/2">
@@ -92,15 +90,14 @@
         </div>
 
         <div class="flex gap-8 items-center">
-            <a href="#shop" class="nav-link">Shop All</a>
-            <button class="nav-link border-l border-white/20 pl-8">Bag (0)</button>
+            <a href="#" class="nav-link">Shop All</a>
         </div>
     </nav>
 
     <section class="hero-container">
-        <div class="absolute inset-0 opacity-50">
-            <img src="https://images.unsplash.com/photo-1602872030219-cde6d8349551?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover scale-105 blur-[2px]">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1570823635306-250abb06d4b3?auto=format&fit=crop&q=80&w=2000" alt="Lit Candle Co" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div> 
         </div>
         
         <div class="relative z-10 text-center text-white px-4">
@@ -108,165 +105,23 @@
             <h1 class="display-font text-5xl md:text-8xl tracking-[0.2em] mb-8 reveal" style="transition-delay: 0.2s;">
                 Lit Candle Co.
             </h1>
-            <p class="serif-italic text-lg md:text-2xl opacity-80 max-w-2xl mx-auto mb-12 reveal" style="transition-delay: 0.4s;">
+            <p class="serif-italic text-lg md:text-2xl opacity-90 max-w-2xl mx-auto mb-12 reveal" style="transition-delay: 0.4s;">
                 Hand-poured on the East Coast.
             </p>
             <div class="reveal" style="transition-delay: 0.6s;">
-                <a href="#collections" class="inline-block btn-outline px-12 py-4 text-[10px] uppercase tracking-[0.4em]">
+                <a href="#collections" class="btn-outline">
                     Explore The Gold Edition
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="collections" class="py-32 px-6 md:px-12">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                <div class="reveal">
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-400 mb-4 block">The 2024 Series</span>
-                    <h2 class="display-font text-4xl md:text-5xl">Curated <br><span class="serif-italic">Atmospheres</span></h2>
-                </div>
-                <p class="max-w-md text-sm text-black/60 leading-relaxed reveal">
-                    Each vessel is a testament to the East Coast spirit—industrial elegance met with raw, natural sophistication.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-                <div class="md:col-span-8 group overflow-hidden cursor-pointer reveal">
-                    <div class="relative h-[600px] overflow-hidden bg-zinc-200">
-                        <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
-                        <div class="absolute bottom-12 left-12 text-white">
-                            <h3 class="display-font text-3xl tracking-widest mb-2 uppercase">The Royal Palace</h3>
-                            <p class="serif-italic opacity-70">Gold Edition Exclusive</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:col-span-4 flex flex-col gap-12">
-                    <div class="group reveal" style="transition-delay: 0.2s;">
-                        <div class="aspect-square overflow-hidden bg-zinc-200 mb-6">
-                            <img src="https://images.unsplash.com/photo-1596435089018-d51ce876b1e1?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <h4 class="display-font tracking-widest text-sm mb-2 uppercase">The Amber Collection</h4>
-                        <a href="#shop" class="text-[9px] uppercase tracking-widest border-b border-black/20 pb-1">Shop Series</a>
-                    </div>
-                    
-                    <div class="group reveal" style="transition-delay: 0.4s;">
-                        <div class="aspect-square overflow-hidden bg-zinc-200 mb-6">
-                            <img src="https://images.unsplash.com/photo-1572726729207-a78d6fed363d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <h4 class="display-font tracking-widest text-sm mb-2 uppercase">Madam Collection</h4>
-                        <a href="#shop" class="text-[9px] uppercase tracking-widest border-b border-black/20 pb-1">Shop Series</a>
-                    </div>
-                </div>
-            </div>
+    <section id="collections" class="py-32 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+             <h2 class="display-font text-3xl uppercase tracking-widest mb-6">Our Craft</h2>
+             <p class="serif-italic text-xl opacity-60">Hand-finished luxury in every pour.</p>
         </div>
     </section>
-
-    <section id="about" class="bg-black text-white py-40">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="display-font text-3xl md:text-5xl tracking-widest mb-12 reveal">
-                A Symphony of <span class="gold-text italic">Light & Scent</span>
-            </h2>
-            <div class="w-px h-24 bg-white/20 mx-auto mb-12 reveal"></div>
-            <p class="serif-italic text-xl md:text-3xl opacity-60 leading-relaxed reveal">
-                "We don't just pour wax; we encapsulate moments of East Coast serenity in hand-finished gold vessels."
-            </p>
-        </div>
-    </section>
-
-    <section id="shop" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24 reveal">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-zinc-400 mb-4 block">Storefront</span>
-                <h2 class="display-font text-4xl uppercase tracking-widest">The Apothecary</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
-                <div class="reveal">
-                    <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-8 relative group">
-                        <img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <button class="bg-white text-black px-8 py-3 text-[9px] uppercase tracking-widest">View Details</button>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-[10px] uppercase tracking-widest opacity-40 mb-2">Coconut Wax</p>
-                            <h3 class="display-font tracking-widest text-sm uppercase">Royal Palace</h3>
-                        </div>
-                        <span class="text-sm font-light">$55.00</span>
-                    </div>
-                </div>
-
-                <div class="reveal" style="transition-delay: 0.2s;">
-                    <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-8 relative group">
-                        <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <button class="bg-white text-black px-8 py-3 text-[9px] uppercase tracking-widest">View Details</button>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-[10px] uppercase tracking-widest opacity-40 mb-2">Signature Floral</p>
-                            <h3 class="display-font tracking-widest text-sm uppercase">Madam</h3>
-                        </div>
-                        <span class="text-sm font-light">$42.00</span>
-                    </div>
-                </div>
-
-                <div class="reveal" style="transition-delay: 0.4s;">
-                    <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-8 relative group">
-                        <img src="https://images.unsplash.com/photo-1601612620453-da8211a7ad60?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <button class="bg-white text-black px-8 py-3 text-[9px] uppercase tracking-widest">View Details</button>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-[10px] uppercase tracking-widest opacity-40 mb-2">Amber Series</p>
-                            <h3 class="display-font tracking-widest text-sm uppercase">The Velvet Room</h3>
-                        </div>
-                        <span class="text-sm font-light">$38.00</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-32 px-6 border-t border-black/5">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
-                <div class="md:col-span-2">
-                    <h2 class="display-font text-2xl tracking-[0.4em] mb-8">LIT</h2>
-                    <p class="text-sm text-black/40 max-w-xs uppercase tracking-widest leading-loose">
-                        Premium fragrance house focused on the intersection of craft and luxury.
-                    </p>
-                </div>
-                <div>
-                    <h5 class="text-[10px] uppercase tracking-widest mb-8 opacity-40 font-bold">Inquiries</h5>
-                    <ul class="text-[10px] uppercase tracking-widest space-y-4">
-                        <li><a href="#" class="hover:text-gold transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-gold transition-colors">Wholesale</a></li>
-                        <li><a href="#" class="hover:text-gold transition-colors">Shipping</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="text-[10px] uppercase tracking-widest mb-8 opacity-40 font-bold">Newsletter</h5>
-                    <p class="text-[10px] uppercase tracking-widest mb-4 opacity-40">Early access and events.</p>
-                    <input type="email" placeholder="EMAIL ADDRESS" class="bg-transparent border-b border-black/20 pb-2 text-[10px] uppercase tracking-widest w-full outline-none focus:border-black transition-all">
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row justify-between pt-12 border-t border-black/5 text-[9px] uppercase tracking-[0.3em] opacity-30">
-                <p>&copy; 2024 Lit Candle Co. East Coast Edition</p>
-                <div class="flex gap-8 mt-4 md:mt-0">
-                    <a href="#">Instagram</a>
-                    <a href="#">Terms</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script>
         function reveal() {
@@ -282,5 +137,7 @@
         window.addEventListener("scroll", reveal);
         window.addEventListener("load", reveal);
     </script>
+</body>
+</html>
 </body>
 </html>
